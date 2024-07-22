@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  font-family: poppins, sans-serif;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10em 0;
+}
+
+.container {
+  width: 90%;
+  height: 85vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 1px 10px 25px 1px #3333332e;
+}
+
+.container .box1 {
+  width: 100%;
+  height: 400px;
+  /* background-color: red; */
+  border-radius: 15px 15px 0 0;
+  background-image: url(./images/drawers.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.box2 {
+  width: 100%;
+  padding: 2em 2em 1em 2em;
+}
+
+.box2 h3 {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.696);
+  margin-bottom: 12px;
+}
+
+.box2 p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.696);
+  margin-bottom: 30px;
+}
+
+.box2 .inner-box2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box2 .inner-box2 .user-info {
+  display: flex;
+  height: 50px;
+}
+
+.inner-box2 .user-info .img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-image: url(./images/avatar-michelle.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.inner-box2 #shareIcon {
+  width: 30px;
+  height: 30px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inner-box2 #shareIcon img {
+  width: 15px;
+  margin-left: 8px;
+}
+
+.container .box3 {
+  display: none;
+  z-index: 10;  
+}
+
+.container .box3 .socials {
+  width: 100%;
+  height: 70px;
+  background-color: #485367;
+  padding: 0 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.container .socials span {
+  color: rgb(159, 166, 172);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container .socials > img {
+  width: 23px;
+}
+
+.container .box3 .share {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.container .box3 .share-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9da7b6;
+  border-radius: 50%;
+  
+}
+
+.box3 .share-btn img {
+  filter: brightness(0) invert(1);
+}
+
+.attribution {
+  margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+  body {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: row;
+    height: 300px;
+    width: 80%;
+  }
+
+  .container .box1 {
+    border-radius: 15px 0 0 15px;
+    height: 300px;
+    width: 40%;
+  }
+
+  body .container .box2 {
+    margin: 2em;
+    padding: 0;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .container .box2 h3 {
+    font-size: 16px;
+  }
+
+  .container .box2 p {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .container .box3{
+    position: relative;
+  }
+
+  .container .box3 .socials {
+    width: 200px;
+    height: 40px;
+    top: 170px;
+    right: -52px;
+    padding: 1em;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container .box3 .socials::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    bottom: -7px;
+    background-color: #485367;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  .container .box3 .socials .share {
+        display: none;
+  }
+ 
+  .container .box3 .socials {
+    flex: 1 0 100%;
+  }
+
+  .container .box3 span {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+  .container .box3 img {
+    width: 20px;
+    padding: 0;
+  }
+}  
+
+@media (width > 800px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (width > 1000px) {
+  .container {
+    width: 50%;
+  }
+}
